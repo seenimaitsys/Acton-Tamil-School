@@ -1,7 +1,15 @@
 import { Container, Image, Row, Col } from "react-bootstrap";
 import { EventImage } from "../../components/Events";
+import ImageModal from "../../components/Events/imagemodal";
+import { useState } from "react";
 // AboutLayout Component
 const EventsLayout = () => {
+  const [modalShow, setModalShow] = useState(false);
+  const [singleImage, setSingleImage] = useState();
+  const setImage = (image) => {
+    setModalShow(true);
+    setSingleImage(image);
+  };
   return (
     // Main container with top margin for spacing
     <Container
@@ -34,8 +42,9 @@ const EventsLayout = () => {
                 width={`100%`}
                 height={`200px`}
                 loading={`lazy`}
-                className={`background-styles`}
+                className={`background-styles cursor-pointer`}
                 style={{ borderRadius: "18px" }}
+                onClick={() => setImage(value.image)}
               ></Image>
             </Col>
           );
@@ -80,8 +89,8 @@ const EventsLayout = () => {
                 width={`100%`}
                 height={`200px`}
                 loading={`lazy`}
-                className={`background-styles`}
-                style={{ borderRadius: "18px" }}
+                className={`background-styles cursor-pointer`}
+                onClick={() => setImage(value.image)}
               ></Image>
             </Col>
           );
@@ -102,7 +111,7 @@ const EventsLayout = () => {
             frameBorder={0}
             allow={`accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share`}
             referrerPolicy={`strict-origin-when-cross-origin`}
-            allowfullscreen
+            allowFullScreen
           ></iframe>
         </Col>
         <Col xl={6}>
@@ -115,7 +124,7 @@ const EventsLayout = () => {
             frameBorder={0}
             referrerPolicy={`strict-origin-when-cross-origin`}
             allow={`accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share`}
-            allowfullscreen
+            allowFullScreen
           ></iframe>
         </Col>
         <h2
@@ -127,6 +136,11 @@ const EventsLayout = () => {
           >{`To View More Events...`}</a>
         </h2>
       </Row>
+      <ImageModal
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+        image={singleImage}
+      />
     </Container>
   );
 };
