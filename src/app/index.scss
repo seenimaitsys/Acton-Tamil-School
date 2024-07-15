@@ -1,0 +1,63 @@
+/* Global styles */
+html,
+div,
+body {
+  font-family: LoobyRegular; /* Set font family for HTML, DIV, and BODY */
+}
+
+/* Navbar transition */
+.navbar {
+  transition: top 0.7s; /* Smooth transition effect for navbar */
+}
+
+/* Remove underline from nav links and add underline on hover */
+.nav-link-hover-underline {
+  text-decoration: none; /* Remove default underline */
+}
+
+.nav-link-hover-underline:hover,
+.nav-link-active {
+  text-decoration: underline; /* Underline on hover and active state */
+  color: rgb(119, 119, 225) !important; /* Custom color for underline */
+}
+
+/* Progress indicator styles */
+#progress {
+  position: fixed; /* Fixed position for progress indicator */
+  bottom: 20px; /* Distance from bottom */
+  right: 2%; /* Distance from right */
+  z-index: 2; /* Stack order */
+  width: 60px; /* Width of the progress indicator */
+
+  display: none; /* Initially hidden */
+  place-items: center; /* Center content inside */
+  border-radius: 50%; /* Circle shape */
+  cursor: pointer; /* Pointer cursor */
+}
+.background-styles {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#progress-value {
+  display: block; /* Block display for progress value */
+  height: calc(100% - 5px); /* Adjusted height */
+  width: calc(100% - 5px); /* Adjusted width */
+  background-color: #ffffff; /* White background */
+  border-radius: 50%; /* Circle shape */
+  z-index: 2; /* Stack order */
+  padding: 10%; /* Padding inside */
+  display: grid; /* Grid display for centering */
+  place-items: center; /* Center content inside */
+
+  font-weight: bolder; /* Bold font weight */
+  color: rgba(84, 168, 199, 0.7); /* Custom text color */
+}
+.rotate-image {
+  transform: rotate(90deg); /* Adjust the degree of rotation as needed */
+}
+/* Custom font loading */
+@font-face {
+  font-family: LoobyRegular; /* Font family name */
+  src: url("../assets/fonts/TimesNewRoman.ttf"); /* Path to font file */
+}
