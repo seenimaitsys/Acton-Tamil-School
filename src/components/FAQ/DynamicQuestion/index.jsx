@@ -81,7 +81,16 @@ export const FAQList = [
   },
   {
     Question: "How do I make payment?",
-    Answer: "Payment will be collected online when you register here.",
+    Answer: (
+      <>
+        Payment will be collected online when you{" "}
+        <a
+          href={`https://www.paypal.com/paypalme/ActonTamilSchool?locale.x=en_US`}
+        >
+          register here.
+        </a>
+      </>
+    ),
   },
   {
     Question: "What does the school tuition cover?",

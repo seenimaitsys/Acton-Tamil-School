@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import { Container, Row, Col, Image, Button } from "react-bootstrap";
 
 import FAQ from "../../components/FAQ";
-import study from "../../assets/images/study.webp";
+import mainimage from "../../assets/images/mainimage.jpg";
 import Experience from "../../components/Experience";
 import Offerings from "../../components/Offerings";
 import ContactUs from "../../components/Contact";
@@ -25,7 +25,7 @@ const HomeLayout = () => {
         <Row>
           <Col xl={6} className="ps-xl-5">
             <Image
-              src={study}
+              src={mainimage}
               width={`100%`}
               height={`490px`}
               alt={`Study`}

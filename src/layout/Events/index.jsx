@@ -90,6 +90,7 @@ const EventsLayout = () => {
                 height={`200px`}
                 loading={`lazy`}
                 className={`background-styles cursor-pointer`}
+                style={{ borderRadius: "18px" }}
                 onClick={() => setImage(value.image)}
               ></Image>
             </Col>
