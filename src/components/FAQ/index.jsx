@@ -10,7 +10,7 @@ const FAQuestion = () => {
         Frequently Asked Questions
       </h2>
       <Row className="d-flex flex-column align-items-center justify-content-center mt-5 mb-5">
-        <Col xl={9}>
+        <Col xl={9} lg={11}>
           <Accordion defaultActiveKey={`0`} className={`mb-5`}>
             {FAQList.map((value, index) => {
               return (

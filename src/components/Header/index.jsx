@@ -151,10 +151,10 @@ const Header = () => {
                       className="border-0 shadow"
                     >
                       <a
-                        href={`https://www.catamilacademy.org/cta/StudentReg.aspx`}
+                        href={`https://www.catamilacademy.org/cta/login.aspx?ReturnUrl=%2fcta`}
                         className={`text-white text-decoration-none`}
                       >
-                        {`Join Us`}
+                        {`Register`}
                       </a>
                     </Button>
                   </Col>

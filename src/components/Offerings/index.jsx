@@ -14,6 +14,7 @@ const Offerings = () => {
           </h2>
           <Col
             xl={3}
+            lg={4}
             className="d-flex flex-column justify-content-between mt-4"
           >
             <Col className="d-flex flex-column align-items-center">
@@ -73,7 +74,7 @@ const Offerings = () => {
               </p>
             </Col>
           </Col>
-          <Col xl={4} className="mt-4">
+          <Col xl={4} lg={4} className="mt-4">
             <Image
               src={books}
               alt={`books`}
@@ -86,6 +87,7 @@ const Offerings = () => {
           </Col>
           <Col
             xl={3}
+            lg={4}
             className="d-flex flex-column justify-content-between  mt-4"
           >
             <Col className="d-flex flex-column align-items-center">

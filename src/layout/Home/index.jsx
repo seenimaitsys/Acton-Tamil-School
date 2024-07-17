@@ -23,7 +23,7 @@ const HomeLayout = () => {
     <>
       <Container fluid className={`mt-130 `}>
         <Row>
-          <Col xl={6} className="ps-xl-5">
+          <Col xl={6} lg={6} className="ps-xl-5">
             <Image
               src={mainimage}
               width={`100%`}
@@ -34,11 +34,15 @@ const HomeLayout = () => {
               style={{ borderRadius: "20px" }}
             ></Image>
           </Col>
-          <Col xl={6} className="d-flex flex-column">
+          <Col
+            xl={6}
+            lg={6}
+            className="d-flex flex-column justify-content-lg-center gap-lg-3"
+          >
             <Col xl={8} className="mt-2">
               <h1
-                style={{ fontSize: "75px" }}
-                className="w-100 text-center text-xl-start"
+                style={{ fontSize: "clamp(10px, 10vw, 75px)" }}
+                className="w-100 text-center text-xl-start text-lg-start"
               >
                 Excellence in Tamil Education
               </h1>
@@ -46,7 +50,7 @@ const HomeLayout = () => {
             <Col xl={10}>
               <p
                 style={{ fontSize: "26px" }}
-                className="mt-3 w-100 text-center text-xl-start"
+                className="mt-3 w-100 text-center text-xl-start text-lg-start"
               >
                 Learn Tamil culture and language with qualified teachers in a
                 supportive environment.
@@ -54,17 +58,17 @@ const HomeLayout = () => {
             </Col>
             <Col
               xl={3}
-              className="d-flex justify-content-center justify-content-xl-start"
+              className="d-flex justify-content-center justify-content-xl-start justify-content-lg-start"
             >
               <Button
                 style={{ backgroundColor: "#AE0000", fontSize: "20px" }}
                 className="border-0 p-2 mt-3 shadow"
               >
                 <a
-                  href={`https://www.catamilacademy.org/cta/StudentReg.aspx`}
+                  href={`https://www.catamilacademy.org/cta/login.aspx?ReturnUrl=%2fcta`}
                   className={`text-white text-decoration-none`}
                 >
-                  {`Join Us Now`}
+                  {`Register Today`}
                 </a>
               </Button>
             </Col>

@@ -15,7 +15,7 @@ const Experience = () => {
             Educational Experience
           </h2>
 
-          <Col xl={4} className="mt-5">
+          <Col xl={4} lg={4} className="mt-5">
             <Card
               className="w-100 p-3 border border-dark shadow"
               style={{ height: "305px" }}
@@ -44,7 +44,7 @@ const Experience = () => {
               </p>
             </Card>
           </Col>
-          <Col xl={4} className="mt-5">
+          <Col xl={4} lg={4} className="mt-5">
             <Card
               className="w-100 p-3 border border-dark shadow"
               style={{ height: "305px" }}
@@ -73,7 +73,7 @@ const Experience = () => {
               </p>
             </Card>
           </Col>
-          <Col xl={4} className="mt-5">
+          <Col xl={4} lg={4} className="mt-5">
             <Card
               className="w-100 p-3 border border-dark shadow"
               style={{ height: "305px" }}
