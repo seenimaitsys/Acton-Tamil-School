@@ -34,6 +34,7 @@ const EventsLayout = () => {
               xl={value.xl}
               md={value.md}
               xs={value.xs}
+              lg={value.lg}
               className={`mt-3 p-1 p-xl-2`}
               key={index}
             >
@@ -81,6 +82,7 @@ const EventsLayout = () => {
               xl={value.xl}
               md={value.md}
               xs={value.xs}
+              lg={value.lg}
               className={`mt-3 p-1 p-xl-2`}
               key={index}
             >
@@ -102,7 +104,7 @@ const EventsLayout = () => {
         >
           Event : Pongal School Celebration
         </h2>
-        <Col xl={6}>
+        <Col xl={6} lg={6}>
           <iframe
             width={`100%`}
             height={`315`}
@@ -115,7 +117,7 @@ const EventsLayout = () => {
             allowFullScreen
           ></iframe>
         </Col>
-        <Col xl={6}>
+        <Col xl={6} lg={6}>
           <iframe
             width={`100%`}
             height={`315`}
