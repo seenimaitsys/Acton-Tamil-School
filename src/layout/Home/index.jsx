@@ -1,13 +1,11 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { Container, Row, Col, Image, Button } from "react-bootstrap";
-
+import { Container, Row, Col, Image, Carousel, Button } from "react-bootstrap";
 import FAQ from "../../components/FAQ";
-import mainimage from "../../assets/images/mainimage.jpg";
 import Experience from "../../components/Experience";
 import Offerings from "../../components/Offerings";
 import ContactUs from "../../components/Contact";
-
+import { slideImage } from "../../components/Events";
 const HomeLayout = () => {
   const location = useLocation();
 
@@ -24,20 +22,28 @@ const HomeLayout = () => {
       <Container fluid className={`mt-130 `}>
         <Row>
           <Col xl={6} lg={6} className="ps-xl-5">
-            <Image
-              src={mainimage}
-              width={`100%`}
-              height={`490px`}
-              alt={`Study`}
-              loading={`lazy`}
-              className={`shadow`}
-              style={{ borderRadius: "20px" }}
-            ></Image>
+            <Carousel interval={1000}>
+              {slideImage.map((value, index) => {
+                return (
+                  <Carousel.Item key={index}>
+                    <Image
+                      src={value.image}
+                      width={`100%`}
+                      height={`490px`}
+                      alt={"Acton Tamil School Events"}
+                      loading={`lazy`}
+                      className={`shadow`}
+                      style={{ borderRadius: "20px" }}
+                    ></Image>
+                  </Carousel.Item>
+                );
+              })}
+            </Carousel>
           </Col>
           <Col
             xl={6}
             lg={6}
-            className="d-flex flex-column justify-content-lg-center gap-lg-3"
+            className="d-flex flex-column justify-content-lg-center gap-lg-1 mt-md-5 mt-lg-0"
           >
             <Col xl={8} className="mt-2">
               <h1

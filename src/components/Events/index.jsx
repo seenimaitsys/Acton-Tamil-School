@@ -13,6 +13,12 @@ import event12 from "../../assets/images/event12.webp";
 import event13 from "../../assets/images/event13.webp";
 import event14 from "../../assets/images/event14.webp";
 import event15 from "../../assets/images/event15.webp";
+import event16 from "../../assets/images/event16.webp";
+import event17 from "../../assets/images/event17.webp";
+import event18 from "../../assets/images/event18.webp";
+import event19 from "../../assets/images/event19.webp";
+import event20 from "../../assets/images/event20.webp";
+
 export const EventImage = [
   {
     image: event1,
@@ -118,5 +124,22 @@ export const EventImage = [
     lg: 3,
     md: 11,
     xs: 12,
+  },
+];
+export const slideImage = [
+  {
+    image: event20,
+  },
+  {
+    image: event16,
+  },
+  {
+    image: event17,
+  },
+  {
+    image: event18,
+  },
+  {
+    image: event19,
   },
 ];
