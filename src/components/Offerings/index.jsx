@@ -1,6 +1,8 @@
 import { Container, Row, Col, Image } from "react-bootstrap";
 import books from "../../assets/images/book.jpg";
+import { UseGetScreenResolution } from "../GetScreenResolution";
 const Offerings = () => {
+  const [currentResolution] = UseGetScreenResolution();
   return (
     <>
       <Container className="d-flex flex-column justify-content-center" fluid>
@@ -81,7 +83,7 @@ const Offerings = () => {
               alt={`books`}
               loading={`lazy`}
               width={`100%`}
-              height={`590px`}
+              height={currentResolution <= 992 ? `350px` : `590px`}
               className="shadow"
               style={{ borderRadius: "20px" }}
             ></Image>

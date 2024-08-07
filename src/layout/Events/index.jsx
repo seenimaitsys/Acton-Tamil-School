@@ -2,8 +2,10 @@ import { Container, Image, Row, Col } from "react-bootstrap";
 import { EventImage } from "../../components/Events";
 import ImageModal from "../../components/Events/imagemodal";
 import { useState } from "react";
+import { UseGetScreenResolution } from "../../components/GetScreenResolution";
 // AboutLayout Component
 const EventsLayout = () => {
+  const [currentResolution] = UseGetScreenResolution();
   const [modalShow, setModalShow] = useState(false);
   const [singleImage, setSingleImage] = useState();
   const setImage = (image) => {
@@ -60,7 +62,7 @@ const EventsLayout = () => {
         <Col xl={12} className={`mt-5`}>
           <iframe
             width={`100%`}
-            height={`500px`}
+            height={currentResolution <= 992 ? `350px` : `500px`}
             className={`rounded-18`}
             src={`https://www.youtube.com/embed/pKHmvMrTXLA?si=hL9jblmIuROiawND&autoplay=1`}
             title={`Tamil Thai Vazhthu`}
@@ -89,7 +91,7 @@ const EventsLayout = () => {
               <Image
                 src={value.image}
                 width={`100%`}
-                height={`200px`}
+                height={`150px`}
                 loading={`lazy`}
                 className={`background-styles cursor-pointer`}
                 style={{ borderRadius: "18px" }}

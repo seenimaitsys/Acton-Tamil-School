@@ -8,7 +8,7 @@ import {
   Button,
 } from "react-bootstrap";
 import { useState, useEffect } from "react";
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/logoweb.png";
 
 const Header = () => {
   const [isNavVisible, setIsNavVisible] = useState(true);
@@ -97,6 +97,7 @@ const Header = () => {
               aria-labelledby={`offcanvasNavbarLabel-expand-sm}`}
               placement={`end`}
               backdrop={true}
+              className={`w-75`}
             >
               {/* Offcanvas header with brand logo */}
               <Offcanvas.Header closeButton>
@@ -105,7 +106,7 @@ const Header = () => {
                     href={`/`}
                     className={`d-flex align-items-center`}
                   >
-                    <Image src={logo} width={"90px"}></Image>
+                    {/* <Image src={logo} width={"90px"}></Image> */}
                     <h2 className={`ms-1 mt-15  fw-bold `}>
                       Acton Tamil School
                     </h2>
