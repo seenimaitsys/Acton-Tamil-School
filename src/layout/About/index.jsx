@@ -1,5 +1,5 @@
 import { Container, Image, Row, Col } from "react-bootstrap";
-import Action_About_image from "../../assets/images/Action-About-image.png";
+import Action_About_image from "../../assets/images/Action-About.webp";
 import Counts from "../../components/Counts";
 // AboutLayout Component
 const AboutLayout = () => {

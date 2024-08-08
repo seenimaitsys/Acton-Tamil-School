@@ -78,7 +78,7 @@ const EventsLayout = () => {
         >
           தமிழ்த்தாய் வாழ்த்து - Tamil Thai Vazhthu
         </h2>
-        {EventImage.slice(9, 15).map((value, index) => {
+        {EventImage.slice(9, 24).map((value, index) => {
           return (
             <Col
               xl={value.xl}
@@ -91,7 +91,7 @@ const EventsLayout = () => {
               <Image
                 src={value.image}
                 width={`100%`}
-                height={`150px`}
+                height={`200px`}
                 loading={`lazy`}
                 className={`background-styles cursor-pointer`}
                 style={{ borderRadius: "18px" }}
