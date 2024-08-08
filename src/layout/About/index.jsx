@@ -1,6 +1,7 @@
 import { Container, Image, Row, Col } from "react-bootstrap";
-import Action_About_image from "../../assets/images/Action-About.webp";
+import Action_About_image from "../../assets/images/Action-About-imag.png";
 import Counts from "../../components/Counts";
+
 // AboutLayout Component
 const AboutLayout = () => {
   return (
@@ -16,7 +17,6 @@ const AboutLayout = () => {
           Teaching Tamil in USA
         </p>
         <Image
-          fluid
           src={Action_About_image}
           width={`90%`}
           alt={`Action Tamil School!`}
