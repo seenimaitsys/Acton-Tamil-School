@@ -36,7 +36,9 @@ export const FAQList = [
         Registration for all (both new & currently enrolled) students usually
         opens up in May End/June Beginning for the upcoming academic
         year.Registration is currently open for 2024-25.
-        <a href={`https://www.catamilacademy.org/cta/StudentReg.aspx`}>
+        <a
+          href={`https://www.catamilacademy.org/cta/login.aspx?ReturnUrl=%2fcta`}
+        >
           Please register here.
         </a>{" "}
         ,

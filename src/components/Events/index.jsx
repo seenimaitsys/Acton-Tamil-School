@@ -7,7 +7,7 @@ import event6 from "../../assets/images/event6.webp";
 import event7 from "../../assets/images/event7.webp";
 import event8 from "../../assets/images/event8.webp";
 import event9 from "../../assets/images/event9.webp";
-// import event10 from "../../assets/images/event10.webp";
+import event10 from "../../assets/images/event10.webp";
 // import event11 from "../../assets/images/event11.webp";
 // import event12 from "../../assets/images/event12.webp";
 import event13 from "../../assets/images/event0013.webp";
@@ -193,6 +193,9 @@ export const slideImage = [
   },
   {
     image: event18,
+  },
+  {
+    image: event10,
   },
   {
     image: event19,
