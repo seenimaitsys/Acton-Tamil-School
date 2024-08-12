@@ -1,10 +1,13 @@
+import { lazy, Suspense } from "react";
 import { Route, Routes, Navigate } from "react-router-dom";
-import HomeLayout from "../../layout/Home";
-import AboutLayout from "../../layout/About";
-import EventsLayout from "../../layout/Events";
+import Loading from "../../components/Loading";
 
 // Routers Component
 const Routers = () => {
+  // Lazy load components
+  const HomeLayout = lazy(() => import("../../layout/Home"));
+  const AboutLayout = lazy(() => import("../../layout/About"));
+  const EventsLayout = lazy(() => import("../../layout/Events"));
   return (
     <>
       {/* Progress indicator for scroll-to-top */}
@@ -27,13 +30,18 @@ const Routers = () => {
       </div>
 
       {/* Routes for different pages */}
-      <Routes>
-        <Route path="/" element={<HomeLayout />} /> {/* Home page */}
-        <Route path="/about" element={<AboutLayout />} /> {/* About page */}
-        <Route path="/events" element={<EventsLayout />} /> {/* Events page */}
-        {/* Navigate to HomeLayout if route doesn't match */}
-        <Route path="*" element={<Navigate to={"/"} />} />
-      </Routes>
+      <Suspense fallback={<Loading />}>
+        <Routes>
+          <Route path={"/"} element={<HomeLayout />} />{" "}
+          <Route path={"/faq"} element={<HomeLayout />} />{" "}
+          <Route path={"/contact"} element={<HomeLayout />} /> {/* Home page */}
+          <Route path="/about" element={<AboutLayout />} /> {/* About page */}
+          <Route path="/events" element={<EventsLayout />} />
+          {/* Events page */}
+          {/* Navigate to HomeLayout if route doesn't match */}
+          <Route path="*" element={<Navigate to={"/"} />} />
+        </Routes>
+      </Suspense>
     </>
   );
 };

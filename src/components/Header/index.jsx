@@ -137,6 +137,12 @@ const Header = () => {
                     Contact Us
                   </Nav.Link>
                   <Nav.Link
+                    href={`/#faq`}
+                    className={`text-nowrap text-black nav-link-hover-underline fw-normal  fs-22 letterSpacing-1`}
+                  >
+                    FAQ
+                  </Nav.Link>
+                  <Nav.Link
                     href={`/events`}
                     className={`text-nowrap text-black nav-link-hover-underline fw-normal  fs-22 letterSpacing-1`}
                   >
