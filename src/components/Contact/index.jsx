@@ -37,10 +37,10 @@ const ContactUs = () => {
                 className={`text-center text-muted`}
               >
                 <a
-                  href={`mailto:admin@actontamilschool.com`}
+                  href={`mailto:actontamilschool@gmail.com`}
                   className={`text-muted text-decoration-none`}
                 >
-                  {`admin@actontamilschool.com`}
+                  {`actontamilschool@gmail.com`}
                 </a>
               </p>
               <h2>Address</h2>
