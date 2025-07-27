@@ -6,7 +6,7 @@ export const FAQList = [
         Acton Tamil School follows International Tamil Academy’s curriculum. ITA
         was previously known as California Tamil Academy (CTA). More information
         can be found on their website -
-        <a href={`https://www.catamilacademy.org/`}>
+        <a href={`https://www.catamilacademy.org/`} target={`_blank`}>
           https://www.catamilacademy.org/
         </a>
       </>
@@ -16,7 +16,7 @@ export const FAQList = [
   {
     Question: "When do classes begin at Acton Tamil School?",
     Answer:
-      " Classes at Acton Tamil School begin in September for every academic year  (Sep 8th 2024 for this year).",
+      " Classes at Acton Tamil School begin in September for every academic year  (Sep 7th 2025-26 for this year).",
   },
 
   {
@@ -38,6 +38,7 @@ export const FAQList = [
         year.Registration is currently open for 2024-25.
         <a
           href={`https://www.catamilacademy.org/cta/login.aspx?ReturnUrl=%2fcta`}
+          target={`_blank`}
         >
           Please register here.
         </a>{" "}
@@ -79,16 +80,14 @@ export const FAQList = [
   {
     Question: "Is there any tuition for Acton Tamil School?",
     Answer:
-      "Acton Tamil School has an annual tuition of $245 per student due upon registration. ",
+      "Acton Tamil School has an annual tuition of $300 per student due upon registration. ",
   },
   {
     Question: "How do I make payment?",
     Answer: (
       <>
         Payment will be collected online when you{" "}
-        <a
-          href={`https://www.paypal.com/paypalme/ActonTamilSchool?locale.x=en_US`}
-        >
+        <a href={`https://admin.pappa.ai/actonregistration`} target={`_blank`}>
           register here.
         </a>
       </>
@@ -112,10 +111,13 @@ export const FAQList = [
         School. Almost all of them are ATS parents with a passion for teaching
         Tamil. If you are interested in volunteering as a teacher, please
         contact us via email at{" "}
-        <a href={`mailto:actontamilschool@gmail.com`}>
+        <a href={`mailto:actontamilschool@gmail.com`} target={`_blank`}>
           actontamilschool@gmail.com
         </a>{" "}
-        or phone <a href={`tel:978-393-1772`}>978-393-1772.</a>{" "}
+        or phone{" "}
+        <a href={`tel:978-393-1772`} target={`_blank`}>
+          978-393-1772.
+        </a>{" "}
       </>
     ),
   },
@@ -140,10 +142,13 @@ export const FAQList = [
     Answer: (
       <>
         If you are interested in volunteering, please contact us via email at{" "}
-        <a href={`mailto:actontamilschool@gmail.com`}>
+        <a href={`mailto:actontamilschool@gmail.com`} target={`_blank`}>
           actontamilschool@gmail.com
         </a>{" "}
-        or phone <a href={`tel:978-393-1772`}>978-393-1772.</a>{" "}
+        or phone{" "}
+        <a href={`tel:978-393-1772`} target={`_blank`}>
+          978-393-1772.
+        </a>{" "}
       </>
     ),
   },
