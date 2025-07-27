@@ -29,30 +29,106 @@ import event27 from "../../assets/images/event008.webp";
 import event28 from "../../assets/images/event009.webp";
 import event29 from "../../assets/images/event0010.webp";
 import event30 from "../../assets/images/event0011.webp";
+import event31 from "../../assets/images/event28.jpeg";
+import event32 from "../../assets/images/event29.jpeg";
+import event33 from "../../assets/images/event26.jpeg";
+import event34 from "../../assets/images/event21.jpeg";
+import event35 from "../../assets/images/event23.jpeg";
+import event36 from "../../assets/images/event24.jpeg";
+import event37 from "../../assets/images/event25.jpeg";
+import event38 from "../../assets/images/event22.jpeg";
+import event39 from "../../assets/images/event27.jpeg";
 // import event31 from "../../assets/images/event0012.webp";
 
 export const EventImage = [
   {
-    image: event1,
+    image: event31,
     xl: 3,
     lg: 3,
     md: 5,
     xs: 4,
   },
   {
-    image: event2,
+    image: event32,
     xl: 4,
     lg: 4,
     md: 7,
     xs: 7,
   },
   {
-    image: event3,
+    image: event33,
     xl: 5,
     lg: 5,
     md: 11,
     xs: 12,
   },
+
+  {
+    image: event34,
+    xl: 5,
+    lg: 5,
+    md: 7,
+    xs: 7,
+  },
+  {
+    image: event35,
+    xl: 4,
+    lg: 4,
+    md: 5,
+    xs: 5,
+  },
+  {
+    image: event39,
+    xl: 3,
+    lg: 3,
+    md: 11,
+    xs: 12,
+  },
+
+  {
+    image: event38,
+    xl: 3,
+    lg: 3,
+    md: 5,
+    xs: 4,
+  },
+  {
+    image: event36,
+    xl: 4,
+    lg: 4,
+    md: 7,
+    xs: 7,
+  },
+  {
+    image: event37,
+    xl: 5,
+    lg: 5,
+    md: 11,
+    xs: 12,
+  },
+
+  {
+    image: event2,
+    xl: 5,
+    lg: 5,
+    md: 7,
+    xs: 7,
+  },
+  {
+    image: event3,
+    xl: 4,
+    lg: 4,
+    md: 5,
+    xs: 5,
+  },
+  {
+    image: event1,
+    xl: 3,
+    lg: 3,
+    md: 11,
+    xs: 12,
+  },
+
   {
     image: event4,
     xl: 5,

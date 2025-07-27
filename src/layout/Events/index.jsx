@@ -30,7 +30,7 @@ const EventsLayout = () => {
           We mark special occasions with family and friends to create lasting
           memories
         </p>
-        {EventImage.slice(0, 9).map((value, index) => {
+        {EventImage.slice(0, 18).map((value, index) => {
           return (
             <Col
               xl={value.xl}
@@ -43,7 +43,7 @@ const EventsLayout = () => {
               <Image
                 src={value.image}
                 width={`100%`}
-                height={`200px`}
+                height={`250px`}
                 loading={`lazy`}
                 className={`background-styles cursor-pointer`}
                 style={{ borderRadius: "18px" }}
@@ -64,7 +64,7 @@ const EventsLayout = () => {
             width={`100%`}
             height={currentResolution <= 992 ? `350px` : `500px`}
             className={`rounded-18`}
-            src={`https://www.youtube.com/embed/pKHmvMrTXLA?si=hL9jblmIuROiawND&autoplay=1`}
+            src={`https://www.youtube.com/embed/pKHmvMrTXLA?si=hL9jblmIuROiawND`}
             title={`Tamil Thai Vazhthu`}
             frameBorder={0}
             allow={`accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share`}
@@ -78,7 +78,7 @@ const EventsLayout = () => {
         >
           தமிழ்த்தாய் வாழ்த்து - Tamil Thai Vazhthu
         </h2>
-        {EventImage.slice(9, 24).map((value, index) => {
+        {EventImage.slice(18, 24).map((value, index) => {
           return (
             <Col
               xl={value.xl}
@@ -91,7 +91,7 @@ const EventsLayout = () => {
               <Image
                 src={value.image}
                 width={`100%`}
-                height={`200px`}
+                height={`250px`}
                 loading={`lazy`}
                 className={`background-styles cursor-pointer`}
                 style={{ borderRadius: "18px" }}
