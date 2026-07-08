@@ -16,7 +16,7 @@ export const FAQList = [
   {
     Question: "When do classes begin at Acton Tamil School?",
     Answer:
-      " Classes at Acton Tamil School begin in September for every academic year  (Sep 7th 2025-26 for this year).",
+      " Classes at Acton Tamil School begin in September for every academic year  (Sep 13th 2026-27 for this year).",
   },
 
   {
@@ -35,7 +35,7 @@ export const FAQList = [
       <>
         Registration for all (both new & currently enrolled) students usually
         opens up in May End/June Beginning for the upcoming academic
-        year.Registration is currently open for 2024-25.
+        year.Registration is currently open for 2026-27.
         <a
           href={`https://www.catamilacademy.org/cta/login.aspx?ReturnUrl=%2fcta`}
           target={`_blank`}
