@@ -1,0 +1,21 @@
+.counts {
+  @apply relative z-[2] grid grid-cols-3 w-[min(800px,calc(100%-40px))] -mt-[58px] mx-auto overflow-hidden border border-[rgba(29,29,31,0.08)] rounded-md bg-white/[.94] shadow-sm [backdrop-filter:blur(20px)] mw560:grid-cols-1 mw560:w-[calc(100%-28px)] mw560:mt-[-34px];
+}
+
+.counts__item {
+  @apply grid place-items-center gap-[3px] py-[25px] px-[18px] text-center mw560:p-[18px];
+}
+
+/* Was [&+&]:border-l [&+&]:border-solid [&+&]:border-line mw560:[&+&]:border-t
+   mw560:[&+&]:border-l-0 (Tailwind cannot resolve `&+&` inside @apply). */
+.counts__item + .counts__item {
+  @apply border-l border-solid border-line mw560:border-t mw560:border-l-0;
+}
+
+.counts__value {
+  @apply text-maroon text-[clamp(1.8rem,4vw,2.7rem)] font-[760] tracking-[-0.04em];
+}
+
+.counts__label {
+  @apply text-ink-soft text-[0.82rem];
+}

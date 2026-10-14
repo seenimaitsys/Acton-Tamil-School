@@ -1,0 +1,47 @@
+/* Image modal (Pure Tailwind styles, zero Bootstrap dependency) */
+
+.image-modal-backdrop {
+  @apply fixed inset-0 z-[999] flex items-center justify-center p-3 sm:p-5 bg-black/85 [backdrop-filter:blur(8px)];
+}
+
+.image-modal-dialog {
+  @apply relative flex flex-col w-full max-w-5xl max-h-[92vh] overflow-hidden rounded-xl bg-paper shadow-2xl border border-line;
+}
+
+.image-modal-header {
+  @apply flex items-center justify-between gap-4 px-5 py-3.5 border-b border-line bg-paper;
+  @apply mw560:gap-2.5 mw560:p-3.5;
+}
+
+.image-modal-title {
+  @apply flex-1 m-0 text-base font-[680] text-ink overflow-hidden text-ellipsis whitespace-nowrap;
+  @apply mw560:text-[0.84rem];
+}
+
+.image-modal-close {
+  @apply grid place-items-center w-8 h-8 p-0 text-ink-muted hover:text-ink transition-colors rounded-full hover:bg-paper-warm;
+}
+
+.image-modal__counter {
+  @apply text-ink-muted text-[0.8rem] font-[680] whitespace-nowrap;
+}
+
+.image-modal__stage {
+  @apply relative grid place-items-center bg-[#0d0d0e] min-h-[min(72vh,760px)] mw820:min-h-[60vh] mw560:min-h-[52vh] overflow-hidden;
+}
+
+.image-modal__image {
+  @apply w-full max-h-[75vh] object-contain select-none;
+}
+
+.image-modal__nav {
+  @apply absolute top-1/2 grid place-items-center w-[46px] h-[46px] p-0 border border-white/[.34] rounded-full bg-[rgba(15,13,14,0.72)] text-white -translate-y-1/2 [backdrop-filter:blur(12px)] transition-[background-color,transform] duration-[180ms] hover:bg-[rgba(15,13,14,0.92)] hover:-translate-y-1/2 hover:scale-[1.04] mw560:w-10 mw560:h-10;
+}
+
+.image-modal__nav--prev {
+  @apply left-[18px] mw560:left-2;
+}
+
+.image-modal__nav--next {
+  @apply right-[18px] mw560:right-2;
+}

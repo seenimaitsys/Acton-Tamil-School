@@ -1,0 +1,127 @@
+.carousel {
+  @apply block text-center pt-[126px] pb-[14px] mw820:pt-[116px] mw820:pb-5 mw560:pt-[90px] mw560:pb-5;
+}
+
+.carousel__intro {
+  @apply flex flex-col items-center;
+}
+
+.carousel__tamil {
+  @apply mb-[10px] text-maroon font-[680] text-[clamp(0.9rem,1.2vw,1.05rem)];
+}
+
+.carousel__title {
+  @apply flex justify-center gap-[0.16em] m-0 text-ink text-[clamp(1rem,5.45vw,4.8rem)] font-[760] tracking-[-0.045em] leading-[0.95] whitespace-nowrap;
+}
+
+.carousel__title-word {
+  @apply text-ink;
+}
+
+.carousel__title-word--accent {
+  @apply text-maroon;
+}
+
+.carousel__lead {
+  @apply max-w-[520px] mt-4 mx-auto text-ink-soft text-[0.92rem] tracking-body leading-[1.6] mw560:max-w-[345px] mw560:mt-[14px] mw560:px-[10px] mw560:text-[0.88rem];
+}
+
+.carousel__bleed {
+  @apply justify-self-auto w-[calc(100vw-4px)] max-w-none mt-5 ml-[calc(50%-50vw+2px)] p-0 mw820:mt-6 mw560:mt-[18px];
+}
+
+.carousel__region {
+  @apply relative;
+}
+
+/*
+ * Cursor state modifiers come BEFORE the base rule on purpose: the base rule's
+ * motion-reduce:cursor-default must keep beating them, exactly as it did when
+ * these were inline utilities.
+ */
+.carousel__viewport--dragging {
+  @apply cursor-grabbing;
+}
+
+.carousel__viewport--idle {
+  @apply cursor-grab;
+}
+
+.carousel__viewport {
+  @apply relative isolate block w-full h-[clamp(320px,30vw,450px)] p-0 overflow-hidden [aspect-ratio:auto] border-0 rounded-none bg-transparent shadow-none [touch-action:pan-y] select-none [--hero-track-width:500%] [--hero-slide-width:6.25%] [@media(min-width:1025px)]:h-[clamp(360px,32vw,480px)] mw820:[--hero-track-width:727.2727%] mw820:h-[clamp(330px,48vw,390px)] mw560:[--hero-track-width:1333.3333%] mw560:h-[clamp(330px,98vw,370px)] motion-reduce:cursor-default;
+  @apply before:absolute before:-right-[10%] before:-left-[10%] before:z-[5] before:top-[clamp(-44px,-3vw,-24px)] before:h-[clamp(50px,6vw,88px)] before:bg-paper before:content-[''] before:pointer-events-none before:[border-radius:0_0_50%_50%/0_0_100%_100%];
+  @apply after:absolute after:-right-[10%] after:-left-[10%] after:z-[5] after:bottom-[clamp(-44px,-3vw,-24px)] after:h-[clamp(50px,6vw,88px)] after:bg-paper after:content-[''] after:pointer-events-none after:[border-radius:50%_50%_0_0/100%_100%_0_0];
+  @apply mw560:before:translate-y-[2px] mw560:before:[filter:drop-shadow(0_2px_0_var(--paper))] mw560:after:-translate-y-[2px] mw560:after:[filter:drop-shadow(0_-2px_0_var(--paper))];
+}
+
+.carousel__track {
+  @apply flex w-[var(--hero-track-width)] h-full [will-change:transform];
+}
+
+/*
+ * The inactive scale comes BEFORE the base rule on purpose: the base rule's
+ * mw560:scale-100 must keep beating it on small screens.
+ */
+.carousel__slide--inactive {
+  @apply scale-[1.025];
+}
+
+.carousel__slide {
+  @apply relative inset-auto basis-[var(--hero-slide-width)] grow-0 shrink-0 min-w-0 h-full m-0 p-0 overflow-hidden border-0 border-r-[6px] border-r-paper rounded-none bg-paper-soft opacity-100 cursor-pointer transition-[filter,transform] duration-500 ease-[cubic-bezier(0.2,0.7,0.2,1)] focus-visible:z-40 mw820:border-r-[5px] mw560:border-r-0 mw560:scale-100;
+}
+
+.carousel__slide--active {
+  @apply z-20 scale-100;
+}
+
+.carousel__image {
+  @apply w-full h-full [filter:saturate(0.88)_brightness(0.94)] object-cover [-webkit-user-drag:none] transition-[filter,transform] duration-[650ms] ease-[cubic-bezier(0.2,0.7,0.2,1)];
+}
+
+.carousel__image--pos-first {
+  @apply object-[54%_center];
+}
+
+.carousel__image--pos-second {
+  @apply object-[center_42%];
+}
+
+.carousel__image--pos-high {
+  @apply object-[center_38%];
+}
+
+.carousel__image--pos-center {
+  @apply object-center;
+}
+
+.carousel__image--active {
+  @apply [filter:saturate(1)_brightness(1)] scale-[1.025];
+}
+
+.carousel__image--idle {
+  @apply hover:[filter:saturate(1)_brightness(1)] hover:scale-[1.025];
+}
+
+.carousel__details {
+  @apply flex items-center flex-col max-w-[680px] mt-[18px] mx-auto mw560:w-shell mw560:mt-4;
+}
+
+.carousel__live {
+  @apply mw560:w-full;
+}
+
+.carousel__label {
+  @apply text-maroon text-[0.9rem] font-[740] tracking-label mw560:text-[0.7rem];
+}
+
+.carousel__caption {
+  @apply mt-1 text-ink-soft text-[1.15rem] leading-[1.55] mw560:max-w-[330px] mw560:mx-auto mw560:text-[0.92rem] mw560:leading-[1.5];
+}
+
+.carousel__actions {
+  @apply flex flex-wrap gap-3 justify-center mt-[14px] mw560:gap-[10px] mw560:mt-3 mw560:w-full;
+}
+
+.carousel__button {
+  @apply min-h-[44px] px-[18px] text-[0.86rem] mw560:w-full;
+}

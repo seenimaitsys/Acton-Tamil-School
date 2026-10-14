@@ -1,0 +1,63 @@
+.contact__panel {
+  @apply grid grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] min-h-[540px] overflow-hidden border border-line rounded-lg bg-white shadow-sm mw1024:grid-cols-1 mw820:min-h-0;
+}
+
+.contact__info {
+  @apply p-[clamp(34px,4.5vw,58px)] mw560:px-5 mw560:py-7;
+}
+
+.contact__tamil {
+  @apply mb-[7px] text-maroon text-[1.1rem] font-[680];
+}
+
+.contact__title {
+  @apply m-0 text-[clamp(2rem,4vw,3.4rem)] font-[720] tracking-heading leading-[1.05] mw560:text-[clamp(2rem,10vw,2.55rem)];
+}
+
+.contact__intro {
+  @apply mt-5 mb-[30px] text-ink-soft text-[1rem] mw560:mt-4 mw560:mb-6 mw560:text-[0.95rem];
+}
+
+.contact__list {
+  @apply grid;
+}
+
+.contact__item {
+  @apply grid grid-cols-[45px_1fr_auto] gap-[13px] items-center min-w-0 py-[17px] border-t border-line text-ink no-underline [&:hover_strong]:text-maroon mw560:grid-cols-[42px_minmax(0,1fr)_auto] mw560:gap-[10px] mw560:py-[15px];
+}
+
+.contact__item-icon {
+  @apply grid place-items-center w-10 h-10 rounded-full bg-paper-warm text-maroon mw560:w-[38px] mw560:h-[38px];
+}
+
+.contact__item-text {
+  @apply grid min-w-0;
+}
+
+.contact__item-label {
+  @apply text-ink-muted text-[0.78rem] font-[650] tracking-normal normal-case;
+}
+
+.contact__item-value {
+  @apply min-w-0 [overflow-wrap:anywhere] text-[0.91rem] font-[650] transition-colors duration-[160ms];
+}
+
+.contact__item-arrow {
+  @apply text-ink-muted text-[0.85rem];
+}
+
+.contact__map {
+  @apply relative min-h-[500px] overflow-hidden bg-paper-soft mw1024:min-h-[460px] mw820:min-h-[420px] mw560:min-h-[350px];
+}
+
+.contact__map-frame {
+  @apply w-full h-full min-h-[540px] border-0 [filter:saturate(0.75)_contrast(0.95)] mw1024:min-h-[460px] mw820:min-h-[420px] mw560:min-h-[350px];
+}
+
+.contact__map-badge {
+  @apply absolute right-5 bottom-5 inline-flex items-center gap-[9px] py-[11px] px-[15px] rounded-full bg-white/[.94] shadow-sm text-[0.8rem] font-bold;
+}
+
+.contact__map-badge-icon {
+  @apply text-maroon;
+}

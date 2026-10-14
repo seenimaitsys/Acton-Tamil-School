@@ -1,0 +1,158 @@
+/* Header logo crossfade: kept as hand-written CSS rather than Tailwind
+   utility soup — a pseudo-element glow plus two custom-eased,
+   multi-property transitions is far more readable this way. Everything
+   else in Header is Tailwind utilities applied to the semantic header__*
+   classes below. */
+
+.brand-logo-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.brand-logo-wrap::after {
+  content: "";
+  position: absolute;
+  inset: -10px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(235, 169, 47, .55) 0%, rgba(235, 169, 47, 0) 72%);
+  opacity: 0;
+  transform: scale(.75);
+  transition: opacity .9s cubic-bezier(.4, 0, .2, 1), transform .9s cubic-bezier(.4, 0, .2, 1);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.brand-logo-wrap.is-anniversary::after {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.brand-logo-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity .8s cubic-bezier(.4, 0, .2, 1), transform .8s cubic-bezier(.4, 0, .2, 1), filter .8s cubic-bezier(.4, 0, .2, 1);
+}
+
+.brand-logo-default {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.brand-logo-hover {
+  opacity: 0;
+  transform: scale(.94);
+}
+
+.brand-logo-wrap.is-anniversary .brand-logo-default {
+  opacity: 0;
+  transform: scale(1.04);
+}
+
+.brand-logo-wrap.is-anniversary .brand-logo-hover {
+  opacity: 1;
+  transform: scale(1);
+  filter: drop-shadow(0 0 7px rgba(235, 169, 47, .55));
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .brand-logo-img,
+  .brand-logo-wrap::after {
+    transition: none;
+  }
+}
+
+.header {
+  @apply fixed inset-x-0 top-0 z-[1000] border-b transition-[background-color,border-color,box-shadow] duration-[180ms] [backdrop-filter:saturate(180%)_blur(20px)] [-webkit-backdrop-filter:saturate(180%)_blur(20px)];
+}
+
+.header--scrolled {
+  @apply border-line bg-[rgba(255,253,249,0.92)] shadow-[0_8px_24px_rgba(61,43,31,0.05)];
+}
+
+.header--top {
+  @apply border-transparent bg-[rgba(255,253,249,0.78)];
+}
+
+.header__inner {
+  @apply flex items-center justify-between min-h-[78px] mw560:min-h-[70px];
+}
+
+.header__brand {
+  @apply flex items-center gap-[18px] py-[10px] min-w-0 [@media(max-width:480px)]:gap-2;
+}
+
+.header__home-link {
+  @apply inline-flex items-center gap-[11px] text-ink no-underline hover:text-ink [@media(max-width:480px)]:gap-[6px];
+}
+
+.header__logo {
+  @apply w-[62px] h-[62px] object-contain mw560:w-[52px] mw560:h-[52px] [@media(max-width:480px)]:w-[46px] [@media(max-width:480px)]:h-[46px];
+}
+
+.header__brand-text {
+  @apply grid gap-px leading-[1.15];
+}
+
+.header__title {
+  @apply text-[0.98rem] font-[730] tracking-[-0.015em] mw560:text-[0.91rem] [@media(max-width:480px)]:text-[12px];
+}
+
+.header__subtitle {
+  @apply text-ink-soft text-[0.73rem] font-semibold mw560:text-[0.68rem] [@media(max-width:480px)]:text-[9px];
+}
+
+.header__anniversary {
+  @apply inline-flex items-center gap-[6px] w-fit m-0 py-1 px-[10px] border border-[#dec27b] rounded-full bg-[#fff4d7] text-[#644b12] text-[10px] font-bold no-underline whitespace-nowrap min-h-[28px] hover:bg-[#f8e7b9] hover:text-[#172f65] [@media(max-width:480px)]:px-[7px] [@media(max-width:480px)]:gap-[3px] [@media(max-width:480px)]:text-[9px];
+}
+
+.header__anniversary-label {
+  @apply [@media(max-width:480px)]:hidden;
+}
+
+.header__anniversary-icon {
+  @apply [@media(max-width:480px)]:hidden;
+}
+
+.header__desktop-nav {
+  @apply flex items-center gap-[6px] mw1024:hidden;
+}
+
+.header__link {
+  @apply relative rounded-full px-3 py-2 text-ink-soft text-[0.88rem] font-[620] tracking-control no-underline transition-colors duration-[160ms] mw1024:min-h-[46px] mw1024:py-[13px] mw1024:px-[15px] mw560:min-h-[48px] mw560:p-[14px] hover:bg-[rgba(29,29,31,0.05)] hover:text-ink;
+}
+
+.header__link--active {
+  @apply bg-[rgba(29,29,31,0.05)] !text-ink;
+}
+
+.header__enroll {
+  @apply ml-[7px];
+}
+
+.header__toggle {
+  @apply hidden mw1024:inline-flex items-center justify-center w-[46px] h-[46px] p-0 border border-line rounded-full bg-white text-ink text-[1.35rem];
+}
+
+.header__mobile-menu {
+  @apply hidden mw1024:absolute mw1024:top-[calc(100%+8px)] mw1024:right-[18px] mw1024:left-[18px] mw1024:flex-col mw1024:items-stretch mw1024:gap-1 mw1024:p-[14px] mw1024:border mw1024:border-line mw1024:rounded-[22px] mw1024:bg-[rgba(255,253,249,0.98)] mw1024:shadow-md mw560:right-[14px] mw560:left-[14px] mw560:max-h-[calc(100dvh-86px)] mw560:p-[10px] mw560:overflow-y-auto mw560:rounded-[18px];
+}
+
+.header__mobile-menu--open {
+  @apply mw1024:flex;
+}
+
+.header__mobile-link {
+  @apply flex items-center gap-[10px] min-h-[46px] py-3 px-4 rounded-xl text-ink-soft text-[0.95rem] font-[620] no-underline transition-colors duration-[160ms] hover:bg-[rgba(29,29,31,0.06)] hover:text-ink;
+}
+
+.header__mobile-link--active {
+  @apply bg-[rgba(29,29,31,0.06)] !text-ink;
+}
+
+.header__mobile-enroll {
+  @apply mt-2 justify-center w-full;
+}

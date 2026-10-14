@@ -1,0 +1,7 @@
+.loading {
+  @apply grid content-center place-items-center gap-3.5 min-h-[75vh] text-[0.9rem] text-ink-soft;
+}
+
+.loading__logo {
+  @apply w-[72px] h-[72px] object-contain animate-loading-pulse;
+}

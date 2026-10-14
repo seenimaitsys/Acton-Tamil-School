@@ -1,0 +1,77 @@
+/* About page */
+
+.about-page {
+  @apply pt-[78px] mw560:pt-[70px];
+}
+
+.about-page__hero {
+  @apply grid grid-cols-1 pt-8 pb-8 mw820:pt-[70px] mw560:pt-[60px] mw560:pb-[65px];
+}
+
+.about-page__hero-copy {
+  @apply max-w-[900px] mx-auto mb-[54px] text-center;
+}
+
+.about-page__hero-title {
+  @apply !text-[clamp(2.9rem,5.6vw,5.25rem)] mw560:!text-[clamp(2.9rem,13vw,4.2rem)];
+}
+
+.about-page__hero-lead {
+  @apply max-w-[710px] !mx-auto;
+}
+
+.about-page__hero-media {
+  @apply w-full overflow-hidden max-h-[520px] aspect-[2.7/1] rounded-lg shadow-md mw820:aspect-[1.6/1] mw560:aspect-[1.15/1];
+}
+
+.about-page__hero-image {
+  @apply w-full h-full object-cover object-[40%_30%] scale-[1.15];
+}
+
+.about-page__story {
+  @apply pb-8;
+}
+
+.about-page__story-layout {
+  @apply grid grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)] gap-[clamp(42px,5vw,72px)] items-center mw820:grid-cols-1 mw820:gap-9;
+}
+
+.about-page__story-lead {
+  @apply mt-[22px] text-ink-soft leading-[1.72];
+}
+
+.about-page__story-copy {
+  @apply mt-[22px] text-ink-soft leading-[1.72];
+}
+
+.about-page__story-media {
+  @apply relative;
+}
+
+.about-page__story-image {
+  @apply w-full aspect-[5/3.6] rounded-lg shadow-sm object-cover object-top;
+}
+
+.about-page__story-caption {
+  @apply absolute right-5 bottom-5 inline-flex items-center gap-[9px] mt-[14px] py-3 px-4 rounded-full bg-white/[.92] shadow-sm text-ink text-[0.83rem] font-bold tracking-[0.01em] [backdrop-filter:blur(16px)];
+}
+
+.about-page__values {
+  @apply pt-8 pb-6;
+}
+
+.about-page__values-grid {
+  @apply grid grid-cols-3 gap-5 mw820:grid-cols-1 mw820:gap-[14px];
+}
+
+.about-page__cta {
+  @apply pt-3 pb-6;
+}
+
+.about-page__cta-card {
+  @apply flex items-end justify-between gap-[42px] py-8 px-[clamp(38px,5vw,62px)] rounded-lg [background:radial-gradient(circle_at_80%_0%,rgba(235,169,47,0.34),transparent_28%),var(--maroon)] text-white mw820:items-start mw820:flex-col mw560:p-[34px_28px];
+}
+
+.about-page__cta-title {
+  @apply max-w-[700px] !text-white;
+}
